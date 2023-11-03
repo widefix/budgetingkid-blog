@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.description}}{%endif%}">
+  
+  {% for css in site.data.plugins.css %}
+  <link rel="stylesheet" href="{{ css | relative_url }}">
+  {% endfor %}
+
+  <!-- Main Stylesheet -->
+  <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon.svg' | relative_url }} " type="image/x-icon">
+  <link rel="icon" href="{{ '/assets/images/favicon.icon' | relative_url }} " type="image/x-icon">
+
+  <!-- google-analytics -->
+  {% if site.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+    <!-- facebook -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:site_name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:image" content="{{site.url}}/assets/images/budgeting_kid_facebook.png" />
+    <!-- facebook -->
+  
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{site.url}}/assets/images/budgeting_kid_twitter.png">
+    <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="image" content="{{site.url}}/assets/images/budgeting_kid_twitter.png">
+    <!-- twitter -->
+
+</head>
