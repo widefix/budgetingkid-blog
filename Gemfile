@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem "rake"
+gem 'kramdown-parser-gfm'
 gem "bundler"
 gem "jekyll"
 gem "jekyll-paginate"
