@@ -1,8 +1,8 @@
 baseurl: ""
 url: "https://help.budgetingkid.com/"
 
-title: BudgetingKid
-description: 'BudgetingKid Help Center'
+title: BudgetingKid Blog
+description: 'Explore our blog for insightful articles on personal finance, budgeting tips, and financial education.'
 
 disqus_shortname: ""
 # Scss Directory
