@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<section class="section pb-0">
+<section class="section pb-0 mt">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center block shadow">
+      <div class="col-lg-11 mx-auto text-center block shadow">
         <img src="{{ page.image | relative_url }}" alt="{{page.title}}" class="img-fluid d-block mx-auto rounded-circle mb-4 author-thumb">
         <h4>{{ page.title }}</h4>
         <div class="content">
@@ -20,9 +20,9 @@ layout: default
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto px-0">
+      <div class="col-lg-11 mx-auto px-0">
         <h2 class="mb-4">Post by author</h2>
-        <div class="bg-white shadow block">
+        <div>
           {% assign author = site.posts | where: "author", page.title %}
           {% for post in author %}
           {% include post.html %}

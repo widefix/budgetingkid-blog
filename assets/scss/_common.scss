@@ -1,6 +1,11 @@
 body {
-  background-color: $body-color;
+  background-image: $bg-image;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -44,8 +49,8 @@ select {
 }
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .bg-cover {
@@ -185,4 +190,7 @@ textarea.form-control{
 .navbar-title {
   font-family: "Reenie Beanie", sans-serif;
   font-size: 40px;
+  &:hover {
+    text-decoration: none;
+  }
 }
